@@ -1,0 +1,23 @@
+RewriteEngine On
+AddDefaultCharset UTF-8
+
+RewriteRule ^api/users/$ api/Api.php
+RewriteRule ^api/users$ api/Api.php
+
+RewriteRule ^signin$ actions/SignIn.php
+RewriteRule ^signup/$ actions/SignUp.php
+
+RewriteRule ^register Register.php
+RewriteRule ^register/$ Register.php
+
+RewriteRule ^login Login.php
+RewriteRule ^login/$ Login.php
+
+RewriteRule ^validate actions/AjaxValidate.php
+RewriteRule ^validate/$ actions/AjaxValidate.php
+
+RewriteRule ^generate-token actions/GenerateToken.php
+RewriteRule ^generate-token/$ actions/GenerateToken.php
+
+RewriteRule ^activation/(.*) actions/Activation.php?code=$1
+RewriteRule ^activation/(.*)/$ actions/Activation/php?code=$1
