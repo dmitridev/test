@@ -1,6 +1,6 @@
 <?php
-require_once 'db/db.php';
-include 'classes/User.php';
+require_once '../db/db.php';
+include '../classes/User.php';
 
 $code = $_GET['code'];
 $query = "select * from users where activation_code='$code'";
@@ -17,4 +17,4 @@ if($result){
 }
 
 $connection->close();
-
+header("location: ../login");
