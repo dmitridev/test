@@ -1,5 +1,5 @@
 <?php
-require_once 'db.php';
+require_once 'db/db.php';
 include 'classes/User.php';
 
 $code = $_GET['code'];

@@ -1,7 +1,7 @@
 <?php
 include_once '../classes/User.php';
 include_once '../classes/JWTHelper.php';
-require_once '../db.php';
+require_once '../db/db.php';
 $post_data = file_get_contents('php://input');
 $body = json_decode($post_data, true);
 $body_key = $body['key'];

@@ -1,7 +1,7 @@
 <?php
 session_start();
 include_once '../classes/JWTHelper.php';
-require_once '../db.php';
+require_once '../db/db.php';
 
 if (!isset($_POST['email']) || !isset($_POST['password'])) {
     $_SESSION['message'] = 'Неверный логин или пароль';

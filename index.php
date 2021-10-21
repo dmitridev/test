@@ -2,7 +2,7 @@
 session_start();
 include 'classes/User.php';
 include 'classes/JWTHelper.php';
-require_once 'db.php';
+require_once 'db/db.php';
 if (!$_SESSION['user'])
     header("location: Login.php");
 
