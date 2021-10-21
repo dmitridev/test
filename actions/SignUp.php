@@ -47,7 +47,7 @@ if (hash_equals($md5_password, $md5_password_confirm)) {
         $folder = '/test';
     $host = $_SERVER['HTTP_HOST'] . ':' . $_SERVER['SERVER_PORT'] . $folder;
 
-    $activation = "/Activation.php?code=$activation_code";
+    $activation = "/activation/$activation_code";
     $protocol = (isset($_SERVER['HTTPS']) && isset($_SERVER['HTTPS']) == 'on') ? 'https://' : 'http://';
     $full_url = $protocol . $host . $activation;
 
