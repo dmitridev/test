@@ -1,0 +1,15 @@
+{
+    "name": "dmitr/test",
+    "description": "тестовое задание для CraftGroup",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Dmitriy Tolmachyov",
+            "email": "dmitrit.dev@gmail.com"
+        }
+    ],
+    "require": {
+        "firebase/php-jwt": "^5.4",
+        "lorddashme/php-simple-captcha": "^1.2"
+    }
+}
