@@ -24,10 +24,10 @@ if (hash_equals($md5_password, $md5_password_confirm)) {
     $file_curr_path = '';
 
     if (array_key_exists('tmp_name', $file)) {
-        $path = "uploads/";
+        $path = "/uploads/";
         $file_curr_path = $path . time() . $file['name'];
 
-        if (!move_uploaded_file($file['tmp_name'], $file_curr_path)) {
+        if (!move_uploaded_file($file['tmp_name'], '..'.$file_curr_path)) {
             die("something wrong, cannot upload file!");
         }
     }
@@ -61,5 +61,6 @@ if (hash_equals($md5_password, $md5_password_confirm)) {
     }
 
     $_SESSION['message'] = "Для завершения регистрации откройте письмо по ссылке.";
-    header("Location: Login.php");
+    header("Location: ../login");
+    exit;
 }
